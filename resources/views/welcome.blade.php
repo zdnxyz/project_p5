@@ -81,9 +81,9 @@
         }
 
         footer {
-            background-color: #343a40;
+            background-color: #ffff;
             /* Warna latar belakang footer */
-            color: #ffffff;
+            color: #000;
             /* Warna teks footer */
             padding: 20px 0;
             /* Padding atas dan bawah */
