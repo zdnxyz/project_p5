@@ -24,8 +24,8 @@ class ArtikelController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'judul' => 'required|min:5',
-            'deskripsi' => 'required|min:3',
+            'judul' => 'required|min:2',
+            'deskripsi' => 'required|min:2',
             'tanggal' => 'required|min:2',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
         ]);
@@ -57,8 +57,8 @@ class ArtikelController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'judul' => 'required|min:5',
-            'deskripsi' => 'required|min:3',
+            'judul' => 'required|min:2',
+            'deskripsi' => 'required|min:2',
             'tanggal' => 'required|min:2'
         ]);
 

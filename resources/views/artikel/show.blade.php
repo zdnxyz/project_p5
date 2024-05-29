@@ -10,7 +10,7 @@
                         {{ __('Artikel') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('artikel.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
+                        <a href="{{ url('/') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
                     </div>
                 </div>
 
@@ -18,11 +18,11 @@
                     <img src="{{ asset('storage/artikels/' . $artikel->image) }}" class="w-100 rounded">
                     <hr>
                     <h4>{{ $artikel->judul }}</h4>
-                    <h4>{!! $artikel->deskripsi !!}</h4>
-                    <h4>{{ $artikel->tanggal}}</h4>
-                    
                     <p class="tmt-3">
                         {!! $artikel->deskripsi !!}
+                    </p>
+                    <p class="tmt-3">
+                    {{ $artikel->tanggal}}
                     </p>
                 </div>
             </div>

@@ -24,8 +24,8 @@ class EskulController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'eskul' => 'required|min:5',
-            'deskripsi' => 'required|min:3',
+            'eskul' => 'required|min:2',
+            'deskripsi' => 'required|min:2',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
         ]);
 
@@ -55,8 +55,8 @@ class EskulController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'eskul' => 'required|min:5',
-            'deskripsi' => 'required|min:5',
+            'eskul' => 'required|min:2',
+            'deskripsi' => 'required|min:2',
         ]);
 
         $eskul = Eskul::findOrFail($id);

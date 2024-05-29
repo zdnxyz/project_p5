@@ -10,7 +10,7 @@
                         {{ __('Eskul') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('eskul.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
                     </div>
                 </div>
 
@@ -18,9 +18,8 @@
                     <img src="{{ asset('storage/eskuls/' . $eskul->image) }}" class="w-100 rounded">
                     <hr>
                     <h4>{{ $eskul->eskul }}</h4>
-                    <h4>{!! $eskul->deskripsi !!}</h4>
                     <p class="tmt-3">
-                        {!! $eskul->deskripsi !!}
+                    {!! $eskul->deskripsi !!}
                     </p>
                 </div>
             </div>

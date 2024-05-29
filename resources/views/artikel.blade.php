@@ -111,7 +111,7 @@
                             <p class="card-title">{{$data ->deskripsi}}</p>
                             <p class="card-title">{{$data ->tanggal}}</p>
 
-                            <a href="{{ route('artikel.show', $data->id) }}" class="btn btn-danger">Lihat Detail</a>
+                            <a href="{{ route('artikel.show', $data->id) }}" class="btn btn-success">Lihat Detail</a>
                         </div>
                     </div>
                 </div>

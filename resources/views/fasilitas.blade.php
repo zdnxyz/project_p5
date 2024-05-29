@@ -102,16 +102,14 @@
                 <h2>Berita Terbaru</h2>
             </div>
             <div class="row">
-                @foreach ( $artikel as $data)
+                @foreach ( $fasilitas as $data)
                 <div class="col-4">
                     <div class="card " style="width: 20rem;">
-                        <img src="{{asset ('/storage/artikels/' . $data->image )}}">
+                        <img src="{{asset ('/storage/fasilitass/' . $data->image )}}">
                         <div class="card-body">
-                            <h5 class="card-title">{{$data ->judul}}</h5>
-                            <p class="card-title">{{$data ->deskripsi}}</p>
-                            <p class="card-title">{{$data ->tanggal}}</p>
+                            <h5 class="card-title">{{$data ->fasilitas}}</h5>
 
-                            <a href="{{ route('artikel.show', $data->id) }}" class="btn btn-danger">Lihat Detail</a>
+                            <a href="{{ route('fasilitas.show', $data->id) }}" class="btn btn-success">Lihat Detail</a>
                         </div>
                     </div>
                 </div>

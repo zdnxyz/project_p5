@@ -21,11 +21,9 @@
                     <p class=tmt-3>
                         tahun kerjasama : {{$industri->tahun_kerjasama}}
                     </p>
-                </div>
                     <p class=tmt-3>
-                        jurusan : {{$industri->nama_jurusan}}
+                        jurusan : {{$industri->jurusan->nama_jurusan}}
                     </p>
-                </div>
             </div>
         </div>
     </div>

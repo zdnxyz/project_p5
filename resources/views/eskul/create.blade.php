@@ -19,7 +19,7 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Eskul</label>
-                            <input type="text" class="form-control @error('eskul') is-invalid @enderror" name="Eskul"
+                            <input type="text" class="form-control @error('eskul') is-invalid @enderror" name="eskul"
                                 value="{{ old('eskul') }}" placeholder="Eskul" required>
                             @error('eskul')
                             <span class="invalid-feedback" role="alert">
