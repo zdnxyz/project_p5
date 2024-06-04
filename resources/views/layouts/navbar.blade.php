@@ -1,23 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="https://smkassalaambandung.sch.id/img/logo-custom.png" width="140" height="100" alt="">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="mainNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link" href="">BERANDA</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{url('tampil_artikel')}}">ARTIKEL</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{url('tampil_eskul')}}">ESKUL</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{url('tampil_fasilitas')}}">FASILITAS</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{url('tampil_jurusan')}}">JURUSAN</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{url('tampil_industri')}}">INDUSTRI</a></li>
-      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
-    </ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XYZ School</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ulaks.css">
+  <!--css-->
+  <!--Link Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!--Awal Navbar-->
+  <!-- HTML -->
+  <div class="topnav">
+    <a class="active" href="{{url('/')}}">Home</a>
+    <a href="{{url('tampil_artikel')}}">Artikel</a>
+    <a href="{{url('tampil_eskul')}}">Eskul</a>
+    <a href="{{url('tampil_fasilitas')}}">Fasilitas</a>
+    <a href="{{url('tampil_jurusan')}}">Jurusan</a>
+    <a href="{{url('tampil_industri')}}">Industri</a>
   </div>
-  <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</nav>
+  <!--Akhir Navbar-->
+  <br>
+  <!--Akhir Rating-->
+  <br>
+
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

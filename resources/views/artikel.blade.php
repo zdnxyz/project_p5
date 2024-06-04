@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Artikel</title>
 </head>
 
 <body>
@@ -81,9 +81,9 @@
         }
 
         footer {
-            background-color: #fff;
+            background-color: #333;
             /* Warna latar belakang footer */
-            color: #000;
+            color: #f9f9f9;
             /* Warna teks footer */
             padding: 20px 0;
             /* Padding atas dan bawah */
@@ -93,25 +93,94 @@
             margin-bottom: 0;
             /* Menghilangkan margin bawah untuk paragraf dalam footer */
         }
+
+        /* CSS */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
         
     </style>
     <div class="section">
         <div class="container">
             <!-- ROW 1 -->
             <div class="col-12 mb-4 text-center">
-                <h2>Berita Terbaru</h2>
+                <h2>Berita Terbaru Seputar Pendidikan</h2>
             </div>
             <div class="row">
                 @foreach ( $artikel as $data)
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="card " style="width: 20rem;">
                         <img src="{{asset ('/storage/artikels/' . $data->image )}}">
                         <div class="card-body">
                             <h5 class="card-title">{{$data ->judul}}</h5>
-                            <p class="card-title">{{$data ->deskripsi}}</p>
                             <p class="card-title">{{$data ->tanggal}}</p>
-
-                            <a href="{{ route('artikel.show', $data->id) }}" class="btn btn-success">Lihat Detail</a>
+                            <p class="card-title">{{$data ->deskripsi}}</p>
                         </div>
                     </div>
                 </div>

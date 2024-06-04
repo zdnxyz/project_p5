@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -81,9 +81,9 @@
         }
 
         footer {
-            background-color: #fff;
+            background-color: #333;
             /* Warna latar belakang footer */
-            color: #000;
+            color: #f9f9f9;
             /* Warna teks footer */
             padding: 20px 0;
             /* Padding atas dan bawah */
@@ -93,13 +93,120 @@
             margin-bottom: 0;
             /* Menghilangkan margin bawah untuk paragraf dalam footer */
         }
-        
+
+        /* CSS */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
     </style>
+    <!--awal jumbotron-->
+    <div class="jumbotron mb-5 text-success">
+        <div class="container">
+            <img src="https://i.ibb.co.com/pWQvFZD/pngegg.png" alt="..." align="right" width="100">
+            <p>
+            <h1>
+                Selamat Datang Di Website
+                <br>XYZ School
+                </p>
+            </h1>
+        </div>
+    </div>
+    </div>
+    <!--akhir jumbotron-->
+    <br>
+    <!--Awal layout-->
+    <div class="container text-dark bg-white">
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <br>Tempat untuk Belajar dan Berkembang
+                </h1>
+                <p>Sekolah XYZ menyediakan lingkungan belajar yang mendukung dan inspiratif bagi siswa-siswi kami. Kami berkomitmen untuk memberikan pendidikan berkualitas dan mempersiapkan generasi mendatang untuk meraih kesuksesan.</p>
+            </div>
+            <div class="col-md-4 mt-4">
+                <video controls width="500" height="240">
+                    <source src="Kehidupan Setelah SMA.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Akhir Layout-->
+    <br>
+    <!--Awal title-->
     <div class="section">
         <div class="container">
             <!-- ROW 1 -->
             <div class="col-12 mb-4 text-center">
-                <h2>Berita Terbaru</h2>
+                <h2>Berita Terbaru Seputar Pendidikan</h2>
             </div>
             <div class="row">
                 @foreach ( $artikel as $data)
@@ -108,10 +215,8 @@
                         <img src="{{asset ('/storage/artikels/' . $data->image )}}">
                         <div class="card-body">
                             <h5 class="card-title">{{$data ->judul}}</h5>
-                            <p class="card-title">{{$data ->deskripsi}}</p>
                             <p class="card-title">{{$data ->tanggal}}</p>
-
-                            <a href="{{ route('artikel.show', $data->id) }}" class="btn btn-danger">Lihat Detail</a>
+                            <p class="card-title">{{$data ->deskripsi}}</p>
                         </div>
                     </div>
                 </div>
@@ -119,6 +224,85 @@
             </div>
         </div>
     </div>
+    <!--akhir title-->
+    <!--teman-->
+    <!--Awal Rating-->
+    <center>
+    <h2>Kerjasama Industri</h2>
+    </center>
+    <div class="rating mb-5 bg-success">
+        <div class="container mt-5 mb-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-car-front"></i>
+                        <h3>
+                            <p>Toyota</p>
+                        </h3>
+                        <h3><b>
+                                <p>Sejak 2014</p>
+                            </b></h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-car-front"></i>
+                        <h3>
+                            <p>Mitsubishi</p>
+                        </h3>
+                        <h3>
+                            <p><b>Sejak 2015</b></p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-truck"></i>
+                        <h3>
+                            <p>Fuso</p>
+                        </h3>
+                        <h3>
+                            <p><b>Sejak 2016</b></p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-bicycle"></i>
+                        <h3>
+                            <p>Suzuki</p>
+                        </h3>
+                        <h3>
+                            <p><b>Sejak 2017</b></p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-bicycle"></i>
+                        <h3>
+                            <p>Yamaha</p>
+                        </h3>
+                        <h3>
+                            <p><b>Sejak 2018</b></p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heart text-white">
+                        <i class="bi bi-bicycle"></i>
+                        <h3>
+                            <p>Honda</p>
+                        </h3>
+                        <h3>
+                            <p><b>Sejak 2019</b></p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     @include('layouts.footer')
     <!-- /FOOTER -->

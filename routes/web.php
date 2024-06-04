@@ -26,15 +26,15 @@ Route::get('/tampil_fasilitas', function () {
     return view('fasilitas', compact('fasilitas'));
 });
 
-// Route::get('/tampil_jurusan', function () {
-//     $jurusan = Jurusan::all();
-//     return view('jurusan', compact('jurusan'));
-// });
+Route::get('/tampil_jurusan', function () {
+    $jurusan = Jurusan::all();
+    return view('jurusan', compact('jurusan'));
+});
 
-// Route::get('/tampil_industri', function () {
-//     $industri = Industri::all();
-//     return view('industri', compact('industri'));
-// });
+Route::get('/tampil_industri', function () {
+    $industri = Industri::all();
+    return view('industri', compact('industri'));
+});
 
 
 Auth::routes();
